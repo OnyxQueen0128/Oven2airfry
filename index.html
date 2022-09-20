@@ -18,60 +18,84 @@
       <h1>OVEN<span>2</span>AIRFRY</h1>
       <div class="App">
         <div class="appInput">
-          <span class="ovenTemp">Oven</span>
-          <div class="ovenTime">
-            <span class="col-auto">
-              <label for="exampleFormControlInput1" class="form-label">
+          <h2 class="ovenTemp">Oven</h2>
+          <div class="ovenInput">
+            <span class="col-auto justify-content-evenly">
+              <label for="exampleFormControlInput1" class="form-label col-4">
                 Temperature:
               </label>
               <input
-                type="email"
+                type="text"
                 class="form-control"
-                id="exampleFormControlInput1"
-                placeholder="name@example.com"
+                id="inputTemp"
               />
             </span>
             <br />
-            <span class="col-auto">
-              <label for="exampleFormControlInput1" class="form-label">
+            <span class="col-auto justify-content-evenly">
+              <label for="exampleFormControlInput1" class="form-label col-4">
                 Hours:
               </label>
               <input
-                type="email"
+                type="text"
                 class="form-control"
-                id="exampleFormControlInput1"
-                placeholder="name@example.com"
+                id="inputHours"
               />
             <br />
-            <span class="col-auto">
-              <label for="exampleFormControlInput1" class="form-label">
+            <span class="col-auto justify-content-evenly">
+              <label for="exampleFormControlInput1" class="form-label col-4">
                 Minutes:
               </label>
               <input
-                type="email"
+                type="text"
                 class="form-control"
-                id="exampleFormControlInput1"
-                placeholder="name@example.com"
+                id="inputMinutes"
               />
           </div>
+          <button class="button-calculate">Calculate</button>
         </div>
         <div class="recTandT">
-          <span class="recHeadline">
+          <h2 class="recHeadline">
             New
             <span>Air Fryer</span>
             Time & Temp
-          </span>
-          <div class="newTemp">
-            Temperature: <span calss="newTempResult"></span>
-          </div>
-          <div class="newTime">
-            Hours: <span calss="newTimeResult"></span>
+          </h2>
+          <span class="col-auto justify-content-evenly">
+              <label for="exampleFormControlInput1" class="form-label col-4">
+                Temperature:
+              </label>
+              <input
+                type="text"
+                class="form-control"
+                id="tempDisplay"
+                value="#"
+              readonly>
+            </span>
             <br />
-            Minutes:
-            <span calss="newTimeResult"></span>
+            <span class="col-auto justify-content-evenly">
+              <label for="exampleFormControlInput1" class="form-label col-4">
+                Hours:
+              </label>
+              <input
+                type="text"
+                class="form-control"
+                id="hoursDisplay"
+                value="#"
+              readonly>
+            <br />
+            <span class="col-auto justify-content-evenly">
+              <label for="exampleFormControlInput1" class="form-label col-4">
+                Minutes:
+              </label>
+              <input
+                type="text"
+                class="form-control"
+                id="minutesDisplay"
+                value="#"
+              readonly>
           </div>
         </div>
       </div>
     </div>
+    <script src="src/script.js"/></script>
   </body>
 </html>
