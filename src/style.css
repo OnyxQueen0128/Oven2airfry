@@ -1,9 +1,21 @@
+body {
+  background-color: #ffe3e1;
+  text-align: center;
+}
 h1 {
   text-align: center;
-  color: #c8e3d4;
+  font-size: 40px;
+  color: #ffffff;
+  margin-bottom: 30px;
 }
 h1 span {
-  color: #87aaaa;
+  color: #ff9494;
+}
+input {
+  padding: 5px 10px;
+  border-width: 0px;
+  border-radius: 50px;
+  color: #ff9494;
 }
 .container {
   max-width: 500px;
@@ -11,8 +23,25 @@ h1 span {
   margin: 0 auto;
 }
 .App {
-  background-color: #f6d7a7;
-  border-radius: 30px;
   margin: 0 auto;
-  padding: 10px;
+}
+.appInput,
+.recTandT {
+  background-color: #ffd1d1;
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+}
+.appInput {
+  margin-bottom: 30px;
+}
+.form-control {
+  display: inline;
+  width: 200px;
+  height: 25px;
+}
+.ovenTemp,
+.recHeadline {
+  font-size: 25px;
+  font-weight: bold;
 }

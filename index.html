@@ -17,23 +17,58 @@
     <div class="container">
       <h1>OVEN<span>2</span>AIRFRY</h1>
       <div class="App">
-        <div class="ovenTemp">Oven Temperature</div>
-        <button class="TempUnit">°F</button>
-        <div class="ovenTime">
-          Hours
-          <br />
-          Minutes
+        <div class="appInput">
+          <span class="ovenTemp">Oven</span>
+          <div class="ovenTime">
+            <span class="col-auto">
+              <label for="exampleFormControlInput1" class="form-label">
+                Temperature:
+              </label>
+              <input
+                type="email"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="name@example.com"
+              />
+            </span>
+            <br />
+            <span class="col-auto">
+              <label for="exampleFormControlInput1" class="form-label">
+                Hours:
+              </label>
+              <input
+                type="email"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="name@example.com"
+              />
+            <br />
+            <span class="col-auto">
+              <label for="exampleFormControlInput1" class="form-label">
+                Minutes:
+              </label>
+              <input
+                type="email"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="name@example.com"
+              />
+          </div>
         </div>
-        <hr />
-        <div class="recT&T">
-          Recommended
-          <span>Air Fryer</span>
-          Time & Temp:
+        <div class="recTandT">
+          <span class="recHeadline">
+            New
+            <span>Air Fryer</span>
+            Time & Temp
+          </span>
           <div class="newTemp">
-            New Temperature: <span calss="newTempResult"></span>
+            Temperature: <span calss="newTempResult"></span>
           </div>
           <div class="newTime">
-            New Time: <span calss="newTimeResult"></span>
+            Hours: <span calss="newTimeResult"></span>
+            <br />
+            Minutes:
+            <span calss="newTimeResult"></span>
           </div>
         </div>
       </div>
