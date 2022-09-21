@@ -7,17 +7,26 @@ let inputMinutes = document.querySelector("#inputMinutes");
 let tempIndicator = document.querySelector("#tempDisplay");
 let minutesIndicator = document.querySelector("#minutesDisplay");
 
+let displayedUnit1 = document.querySelector("#displayedUnit1");
+let displayedUnit2 = document.querySelector("#displayedUnit2");
+
 function TempButtonToggle() {
   if (tempUnitButton.innerHTML == "°F") {
     tempUnitButton.innerHTML = "°C";
+    displayedUnit1.innerHTML = "F";
+    displayedUnit2.innerHTML = "F";
   } else {
     tempUnitButton.innerHTML = "°F";
+    displayedUnit1.innerHTML = "C";
+    displayedUnit2.innerHTML = "C";
   }
 }
 
 function Aifryer() {
   if (tempUnitButton.innerHTML == "°F") {
     AirfryerCelcius();
+
+    console.log("hello");
   } else {
     AirfryerFarenheight();
   }
