@@ -1,19 +1,45 @@
-let buttonCalculate = document.querySelector(".button-calculate");
-let inputTemp = document.querySelector("inputTemp");
-let inputHours = document.querySelector("inputHours");
-let inputMinutes = document.querySelector("inputMinutes");
-let tempIndicator = document.querySelector("tempDisplay");
-let hoursIndicator = document.querySelector("hoursDisplay");
-let minutesIndicator = document.querySelector("minutesDisplay");
+let tempUnitButton = document.querySelector("#btn-converter");
+let buttonCalculate = document.querySelector("#button-calculate");
 
-function Aifryer() {
-  let newTemp = inputTemp.value - 125 / 9;
-  let newHours = inputHours;
-  let newMinutes = inputMinutes;
+let inputTemp = document.querySelector("#inputTemp");
+let inputMinutes = document.querySelector("#inputMinutes");
 
-  console.log(newTemp);
+let tempIndicator = document.querySelector("#tempDisplay");
+let minutesIndicator = document.querySelector("#minutesDisplay");
 
-  tempIndicator.value = "newTemp";
+function TempButtonToggle() {
+  if (tempUnitButton.innerHTML == "°F") {
+    tempUnitButton.innerHTML = "°C";
+  } else {
+    tempUnitButton.innerHTML = "°F";
+  }
 }
 
+function Aifryer() {
+  if (tempUnitButton.innerHTML == "°F") {
+    AirfryerCelcius();
+  } else {
+    AirfryerFarenheight();
+  }
+
+  function AirfryerFarenheight() {
+    let newTemp = inputTemp.value - 25;
+    let newMinutes = inputMinutes.value - inputMinutes.value * 0.2;
+
+    tempIndicator.innerHTML = Math.round(newTemp);
+    minutesIndicator.innerHTML = Math.round(newMinutes);
+  }
+
+  function AirfryerCelcius() {
+    let calcTemp = inputTemp.value * (9 / 5) + 32;
+    let convertedResult = calcTemp - 25;
+    let newTemp = (convertedResult - 32) * (5 / 9);
+    let newMinutes = inputMinutes.value - inputMinutes.value * 0.2;
+
+    tempIndicator.innerHTML = Math.round(newTemp);
+    minutesIndicator.innerHTML = Math.round(newMinutes);
+  }
+}
+
+tempUnitButton.addEventListener("click", TempButtonToggle);
 buttonCalculate.addEventListener("click", Aifryer);

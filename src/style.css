@@ -40,6 +40,10 @@ h1 span {
   font-weight: bold;
   margin-bottom: 20px;
 }
+
+.buttonConvereter {
+  display: inline;
+}
 .button-calculate {
   margin-top: 15px;
 }

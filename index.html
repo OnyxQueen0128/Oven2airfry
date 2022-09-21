@@ -19,10 +19,11 @@
       <div class="App">
         <div class="appInput">
           <h2 class="ovenTemp">Oven</h2>
+          <button class="buttonConvereter" id="btn-converter">°F</button>
           <div class="ovenInput">
             <span class="col-auto justify-content-evenly">
               <label for="exampleFormControlInput1" class="form-label col-4">
-                Temperature:
+                Temp. (°<span>C</span>):
               </label>
               <input
                 type="text"
@@ -30,16 +31,6 @@
                 id="inputTemp"
               />
             </span>
-            <br />
-            <span class="col-auto justify-content-evenly">
-              <label for="exampleFormControlInput1" class="form-label col-4">
-                Hours:
-              </label>
-              <input
-                type="text"
-                class="form-control"
-                id="inputHours"
-              />
             <br />
             <span class="col-auto justify-content-evenly">
               <label for="exampleFormControlInput1" class="form-label col-4">
@@ -51,7 +42,7 @@
                 id="inputMinutes"
               />
           </div>
-          <button class="button-calculate">Calculate</button>
+          <button id="button-calculate">Calculate</button>
         </div>
         <div class="recTandT">
           <h2 class="recHeadline">
@@ -59,39 +50,8 @@
             <span>Air Fryer</span>
             Time & Temp
           </h2>
-          <span class="col-auto justify-content-evenly">
-              <label for="exampleFormControlInput1" class="form-label col-4">
-                Temperature:
-              </label>
-              <input
-                type="text"
-                class="form-control"
-                id="tempDisplay"
-                value="#"
-              readonly>
-            </span>
-            <br />
-            <span class="col-auto justify-content-evenly">
-              <label for="exampleFormControlInput1" class="form-label col-4">
-                Hours:
-              </label>
-              <input
-                type="text"
-                class="form-control"
-                id="hoursDisplay"
-                value="#"
-              readonly>
-            <br />
-            <span class="col-auto justify-content-evenly">
-              <label for="exampleFormControlInput1" class="form-label col-4">
-                Minutes:
-              </label>
-              <input
-                type="text"
-                class="form-control"
-                id="minutesDisplay"
-                value="#"
-              readonly>
+          <p>New Temp. (°<span>C</span>):<span id="tempDisplay"></span></p>
+          <p>New Minutes:<span id="minutesDisplay"></span></p>
           </div>
         </div>
       </div>
