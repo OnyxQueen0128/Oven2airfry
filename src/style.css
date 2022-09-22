@@ -11,13 +11,24 @@ h1 {
 h1 span {
   color: #ff9494;
 }
+
 p,
 span label {
   margin-top: 20px;
 }
 footer {
-  margin-top: 25px;
-  font-size: small;
+  text-align: center;
+  padding-top: 30px;
+  font-size: smaller;
+  color: #ffa3a2;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  color: #6f4c5b;
+  transition: all 150ms ease-in-out;
 }
 .App {
   margin: 0 auto;
@@ -32,9 +43,23 @@ footer {
 .appInput {
   margin-bottom: 30px;
 }
+.buttonCalculate,
 .buttonConvereter {
-  display: inline;
-  text-align: right;
+  padding: 5px 10px;
+  background-color: white;
+  border-color: #ff9494;
+  color: #ff9494;
+}
+.buttonCalculate {
+  border-radius: 30px;
+  margin-top: 15px;
+}
+.buttonConvereter {
+  border-radius: 30px;
+  padding: 7px 10px;
+  position: relative;
+  top: -10px;
+  left: 110px;
 }
 .container {
   max-width: 350px;
@@ -53,9 +78,10 @@ footer {
   margin-bottom: 20px;
   display: inline;
 }
+.ovenTemp {
+  position: relative;
+  left: 20px;
+}
 .resultDisplay {
   font-weight: bolder;
-}
-#button-calculate {
-  margin-top: 15px;
 }
