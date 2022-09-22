@@ -11,12 +11,12 @@ let displayedUnit1 = document.querySelector("#displayedUnit1");
 let displayedUnit2 = document.querySelector("#displayedUnit2");
 
 function TempButtonToggle() {
-  if (tempUnitButton.innerHTML == "°F") {
-    tempUnitButton.innerHTML = "°C";
+  if (tempUnitButton.innerHTML == "°C") {
+    tempUnitButton.innerHTML = "°F";
     displayedUnit1.innerHTML = "F";
     displayedUnit2.innerHTML = "F";
   } else {
-    tempUnitButton.innerHTML = "°F";
+    tempUnitButton.innerHTML = "°C";
     displayedUnit1.innerHTML = "C";
     displayedUnit2.innerHTML = "C";
   }
@@ -24,6 +24,7 @@ function TempButtonToggle() {
 
 function Aifryer() {
   if (inputTemp.value.length === 0) {
+    console.log(inputTemp.value.length);
     null;
     tempIndicator.innerHTML = null;
     minutesIndicator.innerHTML = null;

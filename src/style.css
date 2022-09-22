@@ -15,6 +15,10 @@ p,
 span label {
   margin-top: 20px;
 }
+footer {
+  margin-top: 25px;
+  font-size: small;
+}
 .App {
   margin: 0 auto;
 }
