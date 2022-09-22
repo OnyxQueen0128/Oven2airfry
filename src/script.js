@@ -23,26 +23,30 @@ function TempButtonToggle() {
 }
 
 function Aifryer() {
-  if (tempUnitButton.innerHTML == "°F") {
-    AirfryerCelcius();
-
-    console.log("hello");
+  if (inputTemp.value.length === 0) {
+    null;
+    tempIndicator.innerHTML = null;
+    minutesIndicator.innerHTML = null;
   } else {
-    AirfryerFarenheight();
-  }
-
-  function AirfryerFarenheight() {
-    let newTemp = inputTemp.value - 25;
-    let newMinutes = inputMinutes.value - inputMinutes.value * 0.2;
-
-    tempIndicator.innerHTML = Math.round(newTemp);
-    minutesIndicator.innerHTML = Math.round(newMinutes);
+    if (tempUnitButton.innerHTML == "°F") {
+      AirfryerCelcius();
+    } else {
+      AirfryerFarenheight();
+    }
   }
 
   function AirfryerCelcius() {
     let calcTemp = inputTemp.value * (9 / 5) + 32;
     let convertedResult = calcTemp - 25;
     let newTemp = (convertedResult - 32) * (5 / 9);
+    let newMinutes = inputMinutes.value - inputMinutes.value * 0.2;
+
+    tempIndicator.innerHTML = Math.round(newTemp);
+    minutesIndicator.innerHTML = Math.round(newMinutes);
+  }
+
+  function AirfryerFarenheight() {
+    let newTemp = inputTemp.value - 25;
     let newMinutes = inputMinutes.value - inputMinutes.value * 0.2;
 
     tempIndicator.innerHTML = Math.round(newTemp);
